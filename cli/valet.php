@@ -62,7 +62,7 @@ if (is_dir(VALET_HOME_PATH)) {
      */
     $app->command('domain [domain]', function ($domain = null) {
         if ($domain === null) {
-            return info(Configuration::read()['domain']);
+            return output(Configuration::read()['domain']);
         }
 
         $oldDomain = Configuration::read()['domain'];
